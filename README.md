@@ -2,7 +2,7 @@
 A minimal Laravel + React Learning Management System for courses and users.
 🚀 Setup (Local)
 # Clone repo
-git clone https://github.com/your-username/LMS.git
+git clone https://github.com/haseebraza715/LMS.git
 
 # Install backend
 composer install
