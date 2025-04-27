@@ -11,14 +11,11 @@ yarn-error.log
 .phpunit.cache
 
 # Laravel public runtime files
-/public/hot
-/public/storage
+
 
 # Do not ignore public/build (IMPORTANT)
 
 # Sensitive files
-.env
-.env.*
 Homestead.json
 Homestead.yaml
 /auth.json
