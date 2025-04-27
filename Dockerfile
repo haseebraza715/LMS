@@ -1,4 +1,4 @@
-# Use an official PHP image with extensions
+# Use official PHP image
 FROM php:8.2-fpm
 
 # Install system dependencies
@@ -28,8 +28,8 @@ RUN composer install --optimize-autoloader --no-dev
 # Set permissions
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
-# Expose port 8000
+# Expose port
 EXPOSE 8000
 
-# Start Laravel server
-CMD php artisan serve --host=0.0.0.0 --port=8000
+# 👉 Important: Create DB, migrate, seed, then start server
+CMD touch /database/database.sqlite && php artisan migrate:fresh --seed && php artisan serve --host=0.0.0.0 --port=8000
