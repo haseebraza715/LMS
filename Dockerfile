@@ -32,4 +32,4 @@ RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 EXPOSE 8000
 
 # 👉 Important: Create DB, migrate, seed, then start server
-CMD touch /database/database.sqlite && php artisan migrate:fresh --seed && php artisan serve --host=0.0.0.0 --port=8000
+CMD  php artisan migrate:fresh --seed && php artisan serve --host=0.0.0.0 --port=8000
