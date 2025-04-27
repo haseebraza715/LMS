@@ -1,4 +1,4 @@
- LMS - Learning Management System
+# LMS - Learning Management System
 A minimal Laravel + React Learning Management System for courses and users.
 🚀 Setup (Local)
 # Clone repo
