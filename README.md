@@ -1,29 +1,43 @@
-# LMS - Learning Management System
-A minimal Laravel + React Learning Management System for courses and users.
-🚀 Setup (Local)
-# Clone repo
-git clone https://github.com/haseebraza715/LMS.git
+# Learning Management System (LMS)
 
-# Install backend
+A minimal Learning Management System built with Laravel and React for managing courses and users.
+
+## Setup (Local)
+
+### Clone the Repository
+```bash
+git clone https://github.com/haseebraza715/LMS.git
+```
+
+### Backend Installation
+```bash
 composer install
 cp .env.example .env
 php artisan key:generate
+```
 
-# Migrate & seed
+### Database Migration and Seeding
+```bash
 php artisan migrate:fresh --seed
+```
 
-# Start server
+### Start the Backend Server
+```bash
 php artisan serve
+```
 
-Frontend (React):
+### Frontend Installation (React)
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
- Deployment
+## Deployment
 
-Dockerized Laravel backend.
-SQLite auto-created.
+- The Laravel backend is Dockerized.
+- SQLite database is automatically created.
 
-About
-A minimal LMS built with Laravel and React.
+## About
+
+This is a minimal LMS developed using Laravel for the backend and React for the frontend, designed to handle course and user management efficiently.
