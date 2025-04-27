@@ -25,12 +25,14 @@ COPY . .
 # Install dependencies
 RUN composer install --optimize-autoloader --no-dev
 
-# Set permissions
+# 👉 Ensure SQLite file exists and is writable
+RUN mkdir -p database && touch database/database.sqlite && chmod -R 777 database
+
+# Set permissions for storage and cache
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Expose port
 EXPOSE 8000
 
-# 👉 Important: Create DB, migrate, seed, then start server
+# Start Laravel server with migration and seeding
 CMD php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=8000
-
