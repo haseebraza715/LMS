@@ -2,7 +2,7 @@
 
 A minimal Learning Management System built with Laravel and React for managing courses and users.
 
-![LMS Screenshot](./LMS.jpg)
+![LMS Screenshot](./LMS.png)
 
 
 ## Setup (Local)
